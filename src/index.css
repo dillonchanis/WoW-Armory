@@ -1,0 +1,246 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 17px;
+  color: #fff;
+  background: #000;
+}
+
+#root {
+	height: 100%;
+}
+
+h1 {
+	font-size: 54px;
+	font-weight: 900;
+}
+
+/** Loading **/
+
+.loader{
+  margin: 0 0 2em;
+  height: 100px;
+  width: 20%;
+  text-align: center;
+  padding: 1em;
+  margin: 0 auto 1em;
+  display: inline-block;
+  vertical-align: top;
+}
+
+svg path,
+svg rect{
+  fill: #FF6700;
+}
+
+/** Class Colors **/
+
+.Warrior {
+	color: #c69b6d;
+}
+
+.Warrior.border {
+	border-color: #c69b6d;
+}
+
+.Paladin {
+	color: #f48cba;
+}
+
+.Paladin.border {
+	border-color: #f48cba;
+}
+
+.Hunter {
+	color: #aad372;
+}
+
+.Hunter.border {
+	border-color: #aad372;
+}
+
+.Rogue {
+	color: #fff468;
+}
+
+.Rogue.border {
+	border-color: #fff468;
+}
+
+.Priest {
+	color: #f0ebe0;
+}
+
+.Priest.border {
+	border-color: #f0ebe0;
+}
+
+.Death.Knight {
+	color: #c41e3b;
+}
+
+.Death.Knight.border {
+	border-color: #c41e3b;
+}
+
+.Shaman {
+	color: #2359ff;
+}
+
+.Shaman.border {
+	border-color: #2359ff;
+}
+
+.Mage {
+	color: #68ccef;
+}
+
+.Mage.border {
+	border-color: #68ccef;
+}
+
+.Warlock {
+	color: #9382c9;
+}
+
+.Warlock.border {
+	border-color: #9382c9;
+}
+
+.Monk {
+	color: #00ffba;
+}
+
+.Monk.border:hover {
+	border-color: #00ffba;
+}
+
+.Druid {
+	color: #ff7c0a;
+}
+
+.Druid.border {
+	border-color: #ff7c0a;
+}
+
+.Demon.Hunter {
+	color: #a330c9;
+}
+
+.Demon.Hunter.border {
+	border-color: #a330c9;
+}
+
+/** Header Component **/
+.navbar {
+	border: none;
+	margin-bottom: 0;
+}
+
+.navbar-default {
+	background-color: rgba(47,47,47,0.98);
+	box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14),0 1px 18px 0 rgba(0,0,0,0.12),0 3px 5px -1px rgba(0,0,0,0.3);
+}
+
+.navbar-default .navbar-brand {
+	color: #fff;
+	opacity: 1;
+	transition: 0.3s ease;
+}
+
+.navbar-default .navbar-brand:hover {
+	opacity: 0.8;
+}
+
+
+
+/** Home Page **/
+.mast {
+	height: 100vh;
+	width: 100%;
+	background: url('./images/home-bg.jpg');
+	background-size: cover;
+	background-position: 50% 65%;
+	background-repeat: no-repeat;
+	display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/** Search Component **/
+.form-control {
+	background-color: rgba(47,47,47,0.74);
+	color: #fff;
+}
+
+.form-control:focus {
+	border-color: #82CF6D;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 233, 136, 0.6);
+}
+
+.btn {
+	color: rgba(0,0,0,0.87);
+	width: 120px;
+	font-size: 15px;
+	font-weight: 400;
+	border-radius: 22px;
+}
+
+.btn.btn-primary {
+	background-color: #fff;
+}
+
+/** Character Page **/
+.character-sheet-bg {
+	background: url('./images/character-sheet-bg1.jpg');
+	background-size: cover;
+	background-position: center center;
+	height: 100vh;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.panel {
+	border: 1px solid transparent;
+	background-color: rgba(47,47,47,0.74);
+	box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14),0 1px 18px 0 rgba(0,0,0,0.12),0 3px 5px -1px rgba(0,0,0,0.3);
+	transition: 0.45s ease;
+	color: #fff;
+}
+
+.panel:hover {
+	border: 1px solid #f8b700;
+	background-color: rgba(47,47,47,0.90);
+}
+
+/** Progress Bars **/
+.progress-bar.health {
+	background-color: #248000;
+}
+
+.progress-bar.energy {
+	background-color: #cb9501;
+}
+
+.progress-bar.rage {
+	background-color: #ab0000;
+}
+
+.progress-bar.focus {
+	background-color: #964414;
+}
+
+.progress-bar.mana {
+	background-color: #1c8aff;
+}
+
+.progress-bar.runic-power, .progress-bar.maelstrom {
+	background-color: #00bcde;
+}
+
+@media (min-width: 768px) {
+	.navbar {
+		border-radius: 0;
+	}
+}
