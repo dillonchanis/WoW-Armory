@@ -40,7 +40,7 @@ svg rect{
 	color: #c69b6d;
 }
 
-.Warrior.border {
+.Warrior.border:hover {
 	border-color: #c69b6d;
 }
 
@@ -48,7 +48,7 @@ svg rect{
 	color: #f48cba;
 }
 
-.Paladin.border {
+.Paladin.border:hover {
 	border-color: #f48cba;
 }
 
@@ -56,7 +56,7 @@ svg rect{
 	color: #aad372;
 }
 
-.Hunter.border {
+.Hunter.border:hover {
 	border-color: #aad372;
 }
 
@@ -64,7 +64,7 @@ svg rect{
 	color: #fff468;
 }
 
-.Rogue.border {
+.Rogue.border:hover {
 	border-color: #fff468;
 }
 
@@ -72,7 +72,7 @@ svg rect{
 	color: #f0ebe0;
 }
 
-.Priest.border {
+.Priest.border:hover {
 	border-color: #f0ebe0;
 }
 
@@ -80,7 +80,7 @@ svg rect{
 	color: #c41e3b;
 }
 
-.Death.Knight.border {
+.Death.Knight.border:hover {
 	border-color: #c41e3b;
 }
 
@@ -88,7 +88,7 @@ svg rect{
 	color: #2359ff;
 }
 
-.Shaman.border {
+.Shaman.border:hover {
 	border-color: #2359ff;
 }
 
@@ -96,7 +96,7 @@ svg rect{
 	color: #68ccef;
 }
 
-.Mage.border {
+.Mage.border:hover {
 	border-color: #68ccef;
 }
 
@@ -104,7 +104,7 @@ svg rect{
 	color: #9382c9;
 }
 
-.Warlock.border {
+.Warlock.border:hover {
 	border-color: #9382c9;
 }
 
@@ -120,7 +120,7 @@ svg rect{
 	color: #ff7c0a;
 }
 
-.Druid.border {
+.Druid.border:hover {
 	border-color: #ff7c0a;
 }
 
@@ -128,7 +128,7 @@ svg rect{
 	color: #a330c9;
 }
 
-.Demon.Hunter.border {
+.Demon.Hunter.border:hover {
 	border-color: #a330c9;
 }
 
@@ -185,6 +185,10 @@ svg rect{
 	font-size: 15px;
 	font-weight: 400;
 	border-radius: 22px;
+}
+
+.btn:hover {
+	color: rgba(0,0,0,0.87);
 }
 
 .btn.btn-primary {

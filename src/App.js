@@ -41,15 +41,19 @@ class App extends React.Component {
 		let name = this.state.character;
 		let realm = this.state.realm;
 
-		const url = `${api.baseURL}${realm}/${name}?fields=items,stats,pvp&locale=en_US&apikey=${api.key}`;
-
-		axios.get(url).then(function(response) {
-			self.setState({
-				details: response.data
+		axios
+			.post('/', {
+				name: name,
+				realm: realm
+			})
+			.then(function(response) {
+				console.log(response.data);
+			})
+			.catch(function(error) {
+				console.log('error', error)
 			});
 
-			browserHistory.push('/character');
-		});
+			//browserHistory.push('/character');
 	}
 
   render() {
