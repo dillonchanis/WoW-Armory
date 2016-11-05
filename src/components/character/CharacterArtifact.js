@@ -30,17 +30,13 @@ class CharacterArtifact extends React.Component {
 		);
 
 		for(let spellId of mappedArtifact) {
-			/*axios.get(`https://us.api.battle.net/wow/spell/${spellId}?locale=en_US&apikey=${api.key}`)
-					 .then(function(response) {
-					 		artifactTreeArr.push(response.data);
-					 		self.setState({
-					 			artifactTree: artifactTreeArr
-					 		});
-					 });*/
-				artifactTreeArr.push(axios.get(`https://us.api.battle.net/wow/spell/${spellId}?locale=en_US&apikey=${api.key}`)
-					 .then(function(response) {
-					 		return response.data;
-					 }));
+				artifactTreeArr.push(axios.post('/api/spell', {
+							spellId: spellId
+						})
+						.then(function(response) {
+							return response.data;
+						})
+				);
 		}
 
 		Promise.all(artifactTreeArr).then(val => self.setState({
@@ -52,6 +48,7 @@ class CharacterArtifact extends React.Component {
 		return(
 			<div>
 				<h2>Artifact Traits</h2>
+				<br />
 				<CharacterArtifactDetails artifactTalent={this.state.artifactTree} />
 			</div>
 		);

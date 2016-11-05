@@ -47,13 +47,16 @@ class App extends React.Component {
 				realm: realm
 			})
 			.then(function(response) {
-				console.log(response.data);
+
+				self.setState({
+					details: response.data
+				});
+
+				browserHistory.push('/character');
 			})
 			.catch(function(error) {
 				console.log('error', error)
 			});
-
-			//browserHistory.push('/character');
 	}
 
   render() {
