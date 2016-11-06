@@ -7,7 +7,7 @@ class HomePage extends React.Component {
 			<div>
 				<div className="mast">
 					<div className="container">
-						<h1 className="title">The Armory</h1>
+						<h1 className="title">The Forge</h1>
 						<Search fetchCharacter={this.props.fetchCharacter} />
 					</div>
 				</div>

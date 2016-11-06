@@ -3,6 +3,7 @@ import { browserHistory } from 'react-router'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 import Header from './components/common/Header';
+import Footer from './components/common/Footer';
 
 import { hideLoader } from './helpers';
 
@@ -76,6 +77,7 @@ class App extends React.Component {
         		{this.props.children  && React.cloneElement(this.props.children, {fetchCharacter: this.fetchCharacter, key: location.pathname})}
        		</ReactCSSTransitionGroup>
         </div>
+        <Footer />
       </div>
     );
   }
