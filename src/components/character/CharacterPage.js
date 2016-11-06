@@ -1,6 +1,7 @@
 import React from 'react';
 import { browserHistory } from 'react-router'
 
+import CharacterTalents from './CharacterTalents';
 import CharacterStats from './CharacterStats';
 import CharacterArtifact from './CharacterArtifact';
 
@@ -24,7 +25,6 @@ class CharacterPage extends React.Component {
 	render() {
 		const details = this.state.details;
 		const resourceClassName = details.stats.powerType + ' progress-bar';
-		//const thumbnail = `http://render-api-us.worldofwarcraft.com/static-render/us/${details.thumbnail}`;
 
 		if (this.state === null) {
 			browserHistory.push('/');
@@ -38,7 +38,7 @@ class CharacterPage extends React.Component {
 							<header>
 						    <h1 className="media-heading">{this.state.character}</h1>
 						    <h2 className="media-heading">{this.state.realm}</h2>
-						    <p className={getClassName(details.class)}>{details.level} {getClassName(details.class)}</p>
+						    <p className={getClassName(details.class)}>{details.level} {details.talents[0].spec.name} {getClassName(details.class)}</p>
 							</header>
 
 					    <div className="progress">
@@ -52,6 +52,7 @@ class CharacterPage extends React.Component {
 							  </div>
 							</div>
 						</div>
+						<CharacterTalents details={this.state.details} />
 					</div>
 					
 					<CharacterStats details={details} charClass={getClassName(details.class)} />	

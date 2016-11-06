@@ -4,7 +4,6 @@ import { browserHistory } from 'react-router'
 import Header from './components/common/Header';
 
 import axios from 'axios';
-import api from './api.config.js';
 
 class App extends React.Component {
 	constructor() {

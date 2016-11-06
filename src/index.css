@@ -213,6 +213,10 @@ svg rect{
 	color: #fff;
 }
 
+.panel .panel-body p{
+	color: #fff;
+}
+
 .panel:hover {
 	border: 1px solid #f8b700;
 	background-color: rgba(47,47,47,0.90);
@@ -241,6 +245,15 @@ svg rect{
 
 .progress-bar.runic-power, .progress-bar.maelstrom {
 	background-color: #00bcde;
+}
+
+ul.talent-choices li {
+	margin-bottom: 8px;
+}
+
+.icons-small {
+	width: 22px;
+	margin-right: 8px;
 }
 
 @media (min-width: 768px) {

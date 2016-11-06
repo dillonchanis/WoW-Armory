@@ -25,10 +25,10 @@ class Search extends React.Component {
 					<form onSubmit={this.getFormData}>
 				    <h3>Search For A Character</h3>
 				    <div className="form-group">
-				      <input type="text" className="form-control" name="name" placeholder="Character Name" />
+				      <input type="text" className="form-control" name="name" placeholder="Character Name" required />
 				    </div>
 				    <div className="form-group">
-				      <input type="text" className="form-control" name="realm" placeholder="Realm Name" />
+				      <input type="text" className="form-control" name="realm" placeholder="Realm Name" required />
 				    </div>
 				    <button className="btn btn-primary">Search</button>
 		    	</form>

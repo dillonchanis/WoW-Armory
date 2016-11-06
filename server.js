@@ -20,29 +20,29 @@ app.get('*', function(req, res) {
 
 app.post('/', function(req, res) {
 
-		var url = `${api.baseURL}${req.body.realm}/${req.body.name}?fields=items,stats&locale=en_US&apikey=${api.key}`;
+	var url = `${api.baseURL}${req.body.realm}/${req.body.name}?fields=items,stats,talents&locale=en_US&apikey=${api.key}`;
 
-		axios.get(url)
-				 .then(function(response) {
-				 		res.json(response.data);
-				 })
-				 .catch(function(error) {
-				 		return error;
-				 });
+	axios.get(url)
+			 .then(function(response) {
+			 		res.json(response.data);
+			 })
+			 .catch(function(error) {
+			 		return error;
+			 });
 
 });
 
 app.post('/api/spell', function(req, res) {
 
-		var url = `https://us.api.battle.net/wow/spell/${req.body.spellId}?locale=en_US&apikey=${api.key}`;
+	var url = `https://us.api.battle.net/wow/spell/${req.body.spellId}?locale=en_US&apikey=${api.key}`;
 
-		axios.get(url)
-				 .then(function(response) {
-				 		res.json(response.data);
-				 })
-				 .catch(function(error) {
-				 		return error;
-				 });
+	axios.get(url)
+			 .then(function(response) {
+			 		res.json(response.data);
+			 })
+			 .catch(function(error) {
+			 		return error;
+			 });
 				 
 });
 
