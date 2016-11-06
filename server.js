@@ -18,21 +18,16 @@ app.get('*', function(req, res) {
 	res.sendFile(path.resolve('wow-armory', '..', 'build', 'index.html'));
 });
 
-app.post('/', function(req, res) {
+app.post('/', function(req, res, next) {
 
 	var url = `${api.baseURL}${req.body.realm}/${req.body.name}?fields=items,stats,talents&locale=en_US&apikey=${api.key}`;
 
 	axios.get(url)
 			 .then(function(response) {
-			 		if(response.status === 200) {
-			 			res.json(response.data);
-			 		}
-			 		else{
-			 			res.json(response);
-			 		}
+			 		res.json(response.data);
 			 })
 			 .catch(function(error) {
-			 		res.send(error.data);
+			 		next(error);
 			 });
 
 });
@@ -46,7 +41,7 @@ app.post('/api/spell', function(req, res) {
 			 		res.json(response.data);
 			 })
 			 .catch(function(error) {
-			 		res.send(error);
+			 		res.json(error);
 			 });
 				 
 });

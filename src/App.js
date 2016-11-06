@@ -56,7 +56,9 @@ class App extends React.Component {
 			})
 			.catch(function(error) {
 				hideLoader();
-				console.log(error);
+				if(error){
+					alert('There was an error getting a character with that name or realm. Please try again!');
+				}
 			});
 	}
 

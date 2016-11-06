@@ -17,6 +17,11 @@ h1 {
 	font-weight: 900;
 }
 
+h1.title {
+	border-left: 6px solid #48d47a;
+	padding-left: 8px;
+}
+
 p {
 	font-weight: 100;
 }
@@ -38,7 +43,7 @@ p {
 	display: none;
 	position: absolute;
 	top: 50%;
-	left: 50%;
+	left: 45%;
   height: 100px;
   width: 100px;
   text-align: center;
