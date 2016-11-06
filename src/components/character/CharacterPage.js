@@ -30,14 +30,14 @@ class CharacterPage extends React.Component {
 		}
 
 		return(
-			<div className="character-sheet-bg">
+			<div className={"character-sheet-bg " + getClassName(details.class)}>
 				<div className="container">
 					<div className="row">
 						<div className="col-md-4">
 							<header>
 						    <h1 className="media-heading">{this.state.character}</h1>
 						    <h2 className="media-heading">{this.state.realm}</h2>
-						    <p className={getClassName(details.class)}>{details.level} {details.talents[0].spec.name} {getClassName(details.class)}</p>
+						    <p className={getClassName(details.class)+' text'}>{details.level} {details.talents[0].spec.name} {getClassName(details.class)}</p>
 							</header>
 
 					    <div className="progress">
@@ -51,10 +51,17 @@ class CharacterPage extends React.Component {
 							  </div>
 							</div>
 						</div>
-						<CharacterTalents details={this.state.details} />
 					</div>
 					
+					<div className={getClassName(details.class) + ' divider'}></div>
+
 					<CharacterStats details={details} charClass={getClassName(details.class)} />	
+
+					<div className={getClassName(details.class) + ' divider'}></div>
+
+					<CharacterTalents details={this.state.details} />
+
+					<div className={getClassName(details.class) + ' divider'}></div>
 
 					<CharacterArtifact details={details} />
 				</div>

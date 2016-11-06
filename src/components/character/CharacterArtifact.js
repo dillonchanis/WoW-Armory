@@ -45,7 +45,7 @@ class CharacterArtifact extends React.Component {
 
 	render() {
 		return(
-			<div>
+			<div className="artifact-list">
 				<h2>Artifact Traits</h2>
 				<br />
 				<CharacterArtifactDetails artifactTalent={this.state.artifactTree} />

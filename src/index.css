@@ -5,6 +5,7 @@ body {
   font-size: 17px;
   color: #fff;
   background: #000;
+  transition: all 0.3s;
 }
 
 #root {
@@ -14,6 +15,10 @@ body {
 h1 {
 	font-size: 54px;
 	font-weight: 900;
+}
+
+p {
+	font-weight: 100;
 }
 
 /** Loading **/
@@ -42,6 +47,59 @@ h1 {
   z-index: 20;
 }
 
+.divider {
+	height: 10px;
+	margin: 1em 0;
+}
+
+.divider.Warrior {
+	background-image: linear-gradient(90deg, #c69b6d, #000);
+}
+
+.divider.Paladin {
+	background-image: linear-gradient(90deg, #f48cba, #000);
+}
+
+.divider.Hunter {
+	background-image: linear-gradient(90deg, #aad372, #000);
+}
+
+.divider.Rogue {
+	background-image: linear-gradient(90deg, #fff478, #000);
+}
+
+.divider.Priest {
+	background-image: linear-gradient(90deg, #f0ebe0, #000);
+}
+
+.divider.Death.Knight {
+	background-image: linear-gradient(90deg, #c41e3b, #000);
+}
+
+.divider.Shaman {
+	background-image: linear-gradient(90deg, #2359ff, #000);
+}
+
+.divider.Mage {
+	background-image: linear-gradient(90deg, #68ccef, #000);
+}
+
+.divider.Warlock {
+	background-image: linear-gradient(90deg, #9382c9, #000);
+}
+
+.divider.Monk {
+	background-image: linear-gradient(90deg, #00ffba, #000);
+}
+
+.divider.Druid {
+	background-image: linear-gradient(90deg, #ff7c0a, #000);
+}
+
+.divider.Demon.Hunter {
+	background-image: linear-gradient(90deg, #a330c9, #000);
+}
+
 svg path,
 svg rect{
   fill: #82CF6D;
@@ -49,7 +107,7 @@ svg rect{
 
 /** Class Colors **/
 
-.Warrior {
+.Warrior.text {
 	color: #c69b6d;
 }
 
@@ -57,7 +115,7 @@ svg rect{
 	border-color: #c69b6d;
 }
 
-.Paladin {
+.Paladin.text {
 	color: #f48cba;
 }
 
@@ -65,7 +123,7 @@ svg rect{
 	border-color: #f48cba;
 }
 
-.Hunter {
+.Hunter.text {
 	color: #aad372;
 }
 
@@ -73,7 +131,7 @@ svg rect{
 	border-color: #aad372;
 }
 
-.Rogue {
+.Rogue.text {
 	color: #fff468;
 }
 
@@ -81,7 +139,7 @@ svg rect{
 	border-color: #fff468;
 }
 
-.Priest {
+.Priest.text {
 	color: #f0ebe0;
 }
 
@@ -89,7 +147,7 @@ svg rect{
 	border-color: #f0ebe0;
 }
 
-.Death.Knight {
+.Death.Knight.text {
 	color: #c41e3b;
 }
 
@@ -97,7 +155,7 @@ svg rect{
 	border-color: #c41e3b;
 }
 
-.Shaman {
+.Shaman.text {
 	color: #2359ff;
 }
 
@@ -105,7 +163,7 @@ svg rect{
 	border-color: #2359ff;
 }
 
-.Mage {
+.Mage.text {
 	color: #68ccef;
 }
 
@@ -113,7 +171,7 @@ svg rect{
 	border-color: #68ccef;
 }
 
-.Warlock {
+.Warlock.text {
 	color: #9382c9;
 }
 
@@ -121,7 +179,7 @@ svg rect{
 	border-color: #9382c9;
 }
 
-.Monk {
+.Monk.text {
 	color: #00ffba;
 }
 
@@ -129,7 +187,7 @@ svg rect{
 	border-color: #00ffba;
 }
 
-.Druid {
+.Druid.text {
 	color: #ff7c0a;
 }
 
@@ -137,7 +195,7 @@ svg rect{
 	border-color: #ff7c0a;
 }
 
-.Demon.Hunter {
+.Demon.Hunter.text {
 	color: #a330c9;
 }
 
@@ -193,29 +251,122 @@ svg rect{
 }
 
 .btn {
-	color: rgba(0,0,0,0.87);
-	width: 120px;
+	font-family: 'Roboto', sans-serif;
+	color: #555;
+	height: 36px;
+	line-height: 36px;
+	padding: 0 2rem;
 	font-size: 15px;
 	font-weight: 400;
-	border-radius: 22px;
+	border: none;
+	border-radius: 2px;
+	transition: all 0.35s;
 }
 
 .btn:hover {
-	color: rgba(0,0,0,0.87);
+	color: #555;
+	box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14),0 1px 7px 0 rgba(0,0,0,0.12),0 3px 1px -1px rgba(0,0,0,0.2);
 }
 
 .btn.btn-primary {
-	background-color: #fff;
+	background-color: #48d47a;
+}
+
+.btn.btn-primary:hover {
+	background-color: #4de884;
 }
 
 /** Character Page **/
 .character-sheet-bg {
-	background: url('./images/character-sheet-bg1.jpg');
-	background-size: cover;
-	background-position: center center;
 	height: 100vh;
 	padding-top: 50px;
 	padding-bottom: 50px;
+}
+
+/** Class BGs **/
+
+.Death.Knight.character-sheet-bg {
+	background: url('./images/DK-wallpaper.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.Demon.Hunter.character-sheet-bg {
+	background: url('./images/DH-wallpaper.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.Druid.character-sheet-bg {
+	background: url('./images/Druid-wallpaper.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.Hunter.character-sheet-bg {
+	background: url('./images/Hunter-wallpaper.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.Mage.character-sheet-bg {
+	background: url('./images/Mage-wallpaper.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.Monk.character-sheet-bg {
+	background: url('./images/Monk-wallpaper.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.Paladin.character-sheet-bg {
+	background: url('./images/Paladin-wallpaper.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.Priest.character-sheet-bg {
+	background: url('./images/Priest-wallpaper.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.Rogue.character-sheet-bg {
+	background: url('./images/Rogue-wallpaper.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.Shaman.character-sheet-bg {
+	background: url('./images/Shaman-wallpaper.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.Warlock.character-sheet-bg {
+	background: url('./images/Warlock-wallpaper.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.Warrior.character-sheet-bg {
+	background: url('./images/Warrior-wallpaper.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
 }
 
 .panel {
@@ -264,9 +415,8 @@ ul.talent-choices li {
 	margin-bottom: 8px;
 }
 
-.icons-small {
-	width: 22px;
-	margin-right: 8px;
+.artifact-list {
+	padding-bottom: 50px;
 }
 
 @media (min-width: 768px) {

@@ -26,14 +26,23 @@ class CharacterTalents extends React.Component {
 
 	render() {
 		return (
-			<div className="col-md-4 col-md-offset-2">
-				<ul className="list-unstyled talent-choices">
+			<div className="row">
+				<div className="col-md-12">
+					<h2>Talents</h2>
 					{this.sortTalents().map(choice =>
-						<li><img className="icons-small" src={`http://media.blizzard.com/wow/icons/36/${choice.spell.icon}.jpg`} />{choice.spell.name}</li>
+						<div className="media">
+						  <div className="media-left media-middle">
+						     <img className="media-object" src={`http://media.blizzard.com/wow/icons/56/${choice.spell.icon}.jpg`} alt={`${choice.spell.name} Icon`} />
+						  </div>
+						  <div className="media-body">
+						    <h4 className="media-heading">{choice.spell.name}</h4>
+						   	<p>{choice.spell.description}</p>
+						  </div>
+						</div>
 					)}
-				</ul>
+				</div>
 			</div>
-		)
+		);
 	}
 }
 

@@ -56,7 +56,7 @@ class App extends React.Component {
 			})
 			.catch(function(error) {
 				hideLoader();
-				console.log('error', error)
+				console.log(error);
 			});
 	}
 
