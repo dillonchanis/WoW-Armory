@@ -34,8 +34,8 @@ class CharacterPage extends React.Component {
 				<div className="container">
 					<div className="row">
 						<div className="col-md-4">
-							<header>
-						    <h1 className="media-heading">{this.state.character}</h1>
+							<header className="character-sheet">
+						    <a href={`http://us.battle.net/wow/en/character/${this.state.realm}/${this.state.character}/simple`} target="_blank"><h1 className="media-heading">{this.state.character}</h1></a>
 						    <h2 className="media-heading">{this.state.realm}</h2>
 						    <p className={getClassName(details.class)+' text'}>{details.level} {details.talents[0].spec.name} {getClassName(details.class)}</p>
 							</header>

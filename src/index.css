@@ -302,6 +302,14 @@ svg rect{
 }
 
 /** Character Page **/
+header.character-sheet a {
+	color: #fff;
+}
+
+header.character-sheet a:hover {
+	color: #fff;
+}
+
 .character-sheet-bg {
 	height: 100vh;
 	padding-top: 50px;
