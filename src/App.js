@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import { browserHistory } from 'react-router'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 import Header from './components/common/Header';
 
@@ -67,7 +68,13 @@ class App extends React.Component {
       <div>
       	<Header />
         <div>
-        	{this.props.children  && React.cloneElement(this.props.children, {fetchCharacter: this.fetchCharacter})}
+        	<ReactCSSTransitionGroup
+        		transitionName="page"
+        		transitionEnterTimeout={600}
+        		transitionLeaveTimeout={600}
+        	>
+        		{this.props.children  && React.cloneElement(this.props.children, {fetchCharacter: this.fetchCharacter, key: location.pathname})}
+       		</ReactCSSTransitionGroup>
         </div>
       </div>
     );
