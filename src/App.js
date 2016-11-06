@@ -3,6 +3,8 @@ import { browserHistory } from 'react-router'
 
 import Header from './components/common/Header';
 
+import { hideLoader } from './helpers';
+
 import axios from 'axios';
 
 class App extends React.Component {
@@ -36,7 +38,6 @@ class App extends React.Component {
 
 	fetchCharacterDetails() {
 		const self = this;
-
 		let name = this.state.character;
 		let realm = this.state.realm;
 
@@ -46,7 +47,7 @@ class App extends React.Component {
 				realm: realm
 			})
 			.then(function(response) {
-
+				hideLoader();
 				self.setState({
 					details: response.data
 				});
@@ -54,6 +55,7 @@ class App extends React.Component {
 				browserHistory.push('/character');
 			})
 			.catch(function(error) {
+				hideLoader();
 				console.log('error', error)
 			});
 	}

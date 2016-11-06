@@ -5,7 +5,7 @@ import CharacterTalents from './CharacterTalents';
 import CharacterStats from './CharacterStats';
 import CharacterArtifact from './CharacterArtifact';
 
-import { getClassName } from '../../helpers';
+import { isEmpty, getClassName } from '../../helpers';
 
 class CharacterPage extends React.Component {
 	componentWillMount() {
@@ -24,9 +24,8 @@ class CharacterPage extends React.Component {
 
 	render() {
 		const details = this.state.details;
-		const resourceClassName = details.stats.powerType + ' progress-bar';
 
-		if (this.state === null) {
+		if (this.state === null || isEmpty(details)) {
 			browserHistory.push('/');
 		}
 
@@ -47,7 +46,7 @@ class CharacterPage extends React.Component {
 							  </div>
 							</div>
 							<div className="progress">
-							  <div className={resourceClassName} role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style={{width: "100%"}}>
+							  <div className={details.stats.powerType + ' progress-bar'} role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style={{width: "100%"}}>
 							    {details.stats.power}
 							  </div>
 							</div>

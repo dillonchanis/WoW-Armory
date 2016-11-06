@@ -8,5 +8,6 @@ export default (
 	<Route path="/" component={App}>
 		<IndexRoute component={HomePage} />
 		<Route path="/character" component={CharacterPage} />
+		<Route path="*" component={HomePage} />
 	</Route>
 );

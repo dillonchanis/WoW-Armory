@@ -24,10 +24,15 @@ app.post('/', function(req, res) {
 
 	axios.get(url)
 			 .then(function(response) {
-			 		res.json(response.data);
+			 		if(response.status === 200) {
+			 			res.json(response.data);
+			 		}
+			 		else{
+			 			res.json(response);
+			 		}
 			 })
 			 .catch(function(error) {
-			 		return error;
+			 		res.send(error.data);
 			 });
 
 });
@@ -41,7 +46,7 @@ app.post('/api/spell', function(req, res) {
 			 		res.json(response.data);
 			 })
 			 .catch(function(error) {
-			 		return error;
+			 		res.send(error);
 			 });
 				 
 });

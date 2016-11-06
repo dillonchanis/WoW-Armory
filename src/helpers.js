@@ -20,3 +20,27 @@ export function getClassName(id) {
 
 	return classes[id];
 };
+
+export function isEmpty(obj) {
+	for (let prop in obj) {
+		return false;
+	}
+
+	return true;
+}
+
+export function showLoader() {
+	let overlay = document.getElementById('overlay');
+	let loader = document.getElementById('loader');
+
+	overlay.style.display = 'inline-block';
+	loader.style.display = 'inline-block';
+}
+
+export function hideLoader() {
+	let overlay = document.getElementById('overlay');
+	let loader = document.getElementById('loader');
+
+	overlay.style.display = 'none';
+	loader.style.display = 'none';
+}

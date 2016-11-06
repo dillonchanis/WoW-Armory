@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { showLoader } from '../../helpers';
+
 class Search extends React.Component {
 	constructor() {
 		super();
@@ -14,6 +16,8 @@ class Search extends React.Component {
 			name: event.target.name.value,
 			realm: event.target.realm.value
 		};
+
+		showLoader();
 
 		this.props.fetchCharacter(character);
 	}
